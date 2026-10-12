@@ -1,0 +1,94 @@
+:root{
+  --orange:#e8892b; --orange-dark:#c96f14; --ink:#2a2118; --paper:#fbf7f0;
+  --line:#e6dccb; --wood:#efe6d6;
+}
+/* 
+All Shoru ki Changing hy yaha sy yaha hogi randomly  */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.section{padding:28px 16px}
+
+.notice{background:var(--ink);color:#f3e9d8;font-size:12px;text-align:center;padding:6px 12px}
+
+/* 
+All Jo upr black wali lines hy uski changing yaha sy hogi */
+.topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.topbar-in{display:flex;align-items:center;gap:20px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+.brand img{width:38px;height:38px}
+.brand.light{color:#fff;margin-bottom:10px}
+.info{display:flex;gap:18px;font-size:13px;color:#5b4d3a;margin-left:auto;flex-wrap:wrap}
+.actions{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600}
+.cart{background:var(--orange);color:#fff;padding:7px 14px;border-radius:6px}
+.cart:hover{background:var(--orange-dark)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:6px;font-size:20px;padding:2px 10px;cursor:pointer}
+
+/* Nav bar ki changigng Yaha sy hogi  */
+
+
+.nav{background:var(--wood);border-top:1px solid var(--line)}
+.nav .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px;padding-top:9px;padding-bottom:9px}
+.nav a{font-size:13px;font-weight:600;padding:2px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--orange)}
+
+/* All Slides ki jo hy yaha sy hogi  */
+
+.slider{position:relative;overflow:hidden;height:clamp(240px,38vw,460px);background:#222}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .8s ease;display:flex;align-items:center}
+.slide.active{opacity:1;z-index:1}
+.slide-text{max-width:1200px;width:100%;margin:0 auto;padding:0 clamp(24px,8vw,120px);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.45)}
+.slide-text h2{font-size:clamp(22px,4vw,44px);max-width:520px;line-height:1.15}
+.slide-text p{margin:10px 0 18px;max-width:420px;font-size:clamp(13px,1.6vw,17px)}
+.btn{display:inline-block;background:var(--orange);color:#fff;padding:9px 20px;border-radius:6px;font-weight:600;font-size:14px;text-shadow:none}
+.btn:hover{background:var(--orange-dark)}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.4);color:#fff;font-size:26px;cursor:pointer}
+.arrow:hover{background:rgba(0,0,0,.65)}
+.prev{left:12px}.next{right:12px}
+.dots{position:absolute;bottom:12px;left:0;right:0;z-index:3;display:flex;justify-content:center;gap:7px}
+.dots button{width:9px;height:9px;border-radius:50%;border:0;background:rgba(255,255,255,.55);cursor:pointer;padding:0}
+.dots button.on{background:#fff;width:22px;border-radius:5px}
+
+/* cards ki changing yaha sy hogi  */
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{display:block;background:var(--wood);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(60,40,10,.15)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card span{display:block;background:var(--orange);color:#fff;text-align:center;font-size:13px;font-weight:700;padding:8px 6px}
+/* 
+Mid Main jo Title Hy uski changing Yaha sy hogi */
+
+.mid-title{text-align:center;margin:26px 0 18px;font-size:20px}
+.mid-title.boxed{display:table;margin:0 auto 18px;border:1px solid var(--line);background:#fff;padding:6px 26px;font-size:15px}
+
+.page{min-height:50vh}.page h1{margin-bottom:12px}.page h2{margin:24px 0 8px}
+
+/* Footer ki changing Yaha sy hogi  */
+
+.footer{background:var(--orange);color:#fff;margin-top:30px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1.2fr 1.2fr 1fr;gap:28px;padding-top:34px;padding-bottom:26px;font-size:14px}
+.footer h4{margin-bottom:10px;font-size:15px}
+.footer p{margin-bottom:6px}
+.footer a{display:block;margin-bottom:6px}
+.footer a:hover{text-decoration:underline}
+
+/* Courier Jo order ki lines hy yaha sy hogichange */
+
+.courier{display:block;background:#fff;color:var(--ink);font-weight:700;border-radius:6px;padding:6px 12px;margin-bottom:8px;width:max-content}
+.copy{background:rgba(0,0,0,.15);text-align:center;padding:10px;font-size:12px}
+
+@media(max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .info{display:none}
+  .actions{margin-left:auto}
+  .burger{display:block}
+  .nav{display:none}.nav.open{display:block}
+  .nav .wrap{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.slide,.card{transition:none}}
